@@ -1,0 +1,94 @@
+/* 🎨 Main Styles */
+:root {
+    --sidebar-width: 250px;
+    --sidebar-collapsed-width: 50px;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+/* 📱 Sidebar Styles */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background-color: #343a40;
+    padding: 1rem;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.collapsed {
+    width: var(--sidebar-collapsed-width);
+}
+
+.sidebar-content {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidebar.collapsed .sidebar-content {
+    opacity: 0;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* 📄 Main Content */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: var(--sidebar-collapsed-width);
+}
+
+/* 🥤 Drink Cards */
+.drink-card {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.drink-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 🔢 Count Modal */
+#drinkCount {
+    min-width: 50px;
+    text-align: center;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: var(--sidebar-collapsed-width);
+    }
+    
+    .main-content {
+        margin-left: var(--sidebar-collapsed-width);
+    }
+    
+    .sidebar-content {
+        opacity: 0;
+    }
+    
+    .sidebar.expanded {
+        width: var(--sidebar-width);
+    }
+    
+    .sidebar.expanded .sidebar-content {
+        opacity: 1;
+    }
+}
