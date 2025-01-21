@@ -2,6 +2,12 @@
 
 A modern web application for tracking drinks taken from a shared fridge. Perfect for offices, shared spaces, or any environment with a communal fridge.
 
+### 🖥️ User Interface
+![User Interface](docs/images/user-interface.png)
+
+### 👑 Admin Dashboard
+![Admin Dashboard](docs/images/admin-dashboard.png)
+
 ## ✨ Features
 
 - 📱 Modern, responsive interface
@@ -28,7 +34,7 @@ A modern web application for tracking drinks taken from a shared fridge. Perfect
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/NarroxYT/FridgeApp.git
    cd fridge-app
    ```
 
