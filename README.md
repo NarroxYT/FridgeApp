@@ -28,7 +28,7 @@ A modern web application for tracking drinks taken from a shared fridge. Perfect
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/NarroxYT/FridgeApp.git
    cd fridge-app
    ```
 
